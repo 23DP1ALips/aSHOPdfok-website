@@ -29,7 +29,7 @@
     <section id="ashopdfok" class="fullscreen-section">
         <div class="section-content">
             <h1>aSHOPdfok</h1>
-            <p>Konsoles lietotne pārtikas preču e-veikala pārvaldībai</p>
+            <p>Konsoles lietotne pārtikas preču e-veikala pārvaldei</p>
         </div>
     </section>
 
@@ -40,7 +40,9 @@
                 <div class="accordion-item">
                     <button class="accordion-button">Apskatīt produktu sarakstu <i class="fas fa-chevron-down"></i></button>
                     <div class="accordion-content">
-                        <p>Programma ļauj apskatīt visus pieejamos produktus, kārtot tos pēc dažādiem kritērijiem un filtrēt pēc kategorijām.</p>
+                        <ul>
+                            <li>Programma ļauj apskatīt visus pieejamos produktus, kārtot tos pēc dažādiem kritērijiem un filtrēt pēc kategorijām.</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="accordion-item">
@@ -72,19 +74,44 @@
 
     <section id="download" class="fullscreen-section">
         <div class="section-content">
-            <h2>Download</h2>
-            <div class="download-options">
-                <div class="download-option">
-                    <h3>Download from GitHub</h3>
-                    <a href="https://github.com/23DP1ALips/aSHOPdfok" class="download-button github-button">
-                        GitHub <i class="fab fa-github"></i>
-                    </a>
+            <h2>Download Options</h2>
+            <div class="download-cards">
+                <div class="download-card">
+                    <div class="card-header">
+                        <i class="fas fa-file-archive"></i>
+                        <h3>Download ZIP</h3>
+                    </div>
+                    <div class="card-content">
+                        <ol>
+                            <li>Lejupielādējiet <code>.zip</code> arhīvu no GitHub vai šīs mājaslapas</li>
+                            <li>Ekstraktējiet failu uz jums piemērotāko vietu</li>
+                            <li>Atveriet terminālu un ar <code>cd "ceļš uz failu"</code> komandas palīdzību atveriet izvilkto failu</li>
+                            <li>Izpildiet komandu: <code>java -jar target/aSHOPdfok.jar</code> lai palaist programmu</li>
+                        </ol>
+                        <a href="src/file/aSHOPdfok.zip" class="download-button" download="aSHOPdfok.zip">
+                            Download ZIP <i class="fas fa-download"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="download-option">
-                    <h3>Direct Download</h3>
-                    <a href="#" class="download-button direct-button">
-                        Download <i class="fas fa-download"></i>
-                    </a>
+
+                <div class="download-card">
+                    <div class="card-header">
+                        <i class="fab fa-git-alt"></i>
+                        <h3>Git Clone</h3>
+                    </div>
+                    <div class="card-content">
+                        <ol>
+                            <li>Lejupielādējiet Git no <a href="https://git-scm.com" target="_blank">git-scm.com</a> ja tas nav ielādēts</li>
+                            <li>Atveriet terminālu un izpildiet komandu:
+                                <code>git clone https://github.com/23DP1ALips/aSHOPdfok.git</code>
+                            </li>
+                            <li>Pārvietojaties uz projektu ar komandu: <code>cd aSHOPdfok</code></li>
+                            <li>Izpildiet komandu: <code>java -jar target/aSHOPdfok.jar</code> lai palaist programmu</li>
+                        </ol>
+                        <a href="https://github.com/23DP1ALips/aSHOPdfok" class="download-button" target="_blank">
+                            View GitHub <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -92,14 +119,31 @@
 
     <section id="howto" class="fullscreen-section">
         <div class="section-content">
-            <h2>How-to</h2>
-            <p>Šeit būs bieži uzdotie jautājumi un atbildes par projekta izstrādi...</p>
+            <h2>How to Use</h2>
+            <div class="screenshot-carousel">
+                <div class="screenshot active">
+                    <img src="src/img/screenshot1.png" alt="Step 1: Login Screen">
+                    <p>1. Login or register to start</p>
+                </div>
+                <div class="screenshot">
+                    <img src="src/img/screenshot2.png" alt="Step 2: Product List">
+                    <p>2. Browse products with filters</p>
+                </div>
+                <div class="screenshot">
+                    <img src="src/img/screenshot3.png" alt="Step 3: Shopping Cart">
+                    <p>3. Manage your shopping cart</p>
+                </div>
+                <div class="carousel-controls">
+                    <button class="prev-btn">&lt;</button>
+                    <button class="next-btn">&gt;</button>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2023 aSHOPdfok. Visas tiesības aizsargātas.</p>
+            <p>&copy; 2025 aSHOPdfok. Gandrīz visas tiesības aizsargātas.</p>
             <div class="social-icons">
                 <a href="https://github.com/23DP1ALips/aSHOPdfok" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="#"><i class="fab fa-discord"></i></a>
