@@ -12,6 +12,8 @@
 
 - **Alberts Lipšāns** <br> [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/23DP1ALips)
 
+- [Main](https://github.com/23DP1ALips/aSHOPdfok-website)
+
 ## 📝 Apraksts
 
 aSHOPdfok ir konsoles programma paredzēta dažādu saistītu ar produktiem funkciju izpildei. Programma ir piemērota gan viesim, gan reģistrētam lietotājam, gan administrātoram.
