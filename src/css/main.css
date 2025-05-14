@@ -474,14 +474,74 @@ footer {
         padding-top: 0;
     }
 
+    .card-content li {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .card-content ol {
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .card-content code {
+        white-space: pre-wrap;
+        word-break: break-all;
+    }
+
+    .card-header i.fas {
+        transition: transform 0.3s ease;
+    }   
+
+    .download-button {
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+
     .download-cards {
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
     }
     
     .download-card {
         width: 100%;
         max-width: 350px;
+        height: auto;
+        max-height: 80px;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        cursor: pointer;
+        margin: 0 auto 1rem;
+    }
+
+    .download-card.expanded {
+        max-height: none;
+        height: auto;
+    }
+
+    .download-card.expanded .card-header i.fas {
+        transform: rotate(180deg);
+    }
+
+    .download-card .card-content {
+        opacity: 1;
+        padding: 0 1.5rem;
+        height: auto;
+    }
+
+    .download-card:hover {
+        height: auto !important;
+    }
+
+    .download-card .card-content {
+        opacity: 1;
+        padding: 0 1.5rem;
+        height: auto;
+    }
+
+    .fullscreen-section {
+        padding: 1rem;
     }
 
     .mobile-menu-toggle {
@@ -544,6 +604,15 @@ footer {
 
     #main-nav.active ~ .mobile-menu-toggle .hamburger .line:nth-child(3) {
         transform: translateY(-11px) rotate(-45deg);
+    }
+
+    .hamburger .line {
+        background-color: #2c3e50;
+        box-shadow: 0 0 2px rgba(0,0,0,0.2);
+    }
+
+    #main-nav.active ~ .mobile-menu-toggle .hamburger .line {
+        background-color: white;
     }
 
     #ashopdfok h1 {

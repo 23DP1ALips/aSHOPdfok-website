@@ -129,32 +129,46 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.querySelectorAll('.download-card').forEach(card => {
-        card.setAttribute('tabindex', '0');
-        
-        function expandCard() {
-            card.style.height = '380px';
-            card.querySelector('.card-content').style.opacity = '1';
-            card.querySelector('.card-content').style.padding = '1.5rem';
-        }
-        
-        function collapseCard() {
-            card.style.height = '80px';
-            card.querySelector('.card-content').style.opacity = '0';
-            card.querySelector('.card-content').style.padding = '0 1.5rem';
-        }
-        
-        card.addEventListener('mouseenter', expandCard);
-        card.addEventListener('mouseleave', collapseCard);
-        
-        card.addEventListener('focus', expandCard);
-        card.addEventListener('blur', collapseCard);
+    const header = card.querySelector('.card-header');
     
-        card.addEventListener('touchstart', function(e) {
-            if (card.style.height === '80px') {
-                expandCard();
-                e.preventDefault();
+        if (window.innerWidth <= 768) {
+            header.addEventListener('click', (e) => {
+                if (!e.target.closest('a')) {
+                    card.classList.toggle('expanded');
+                }
+            });
+        } else {
+            card.setAttribute('tabindex', '0');
+            
+            function expandCard() {
+                card.style.height = '380px';
+                card.querySelector('.card-content').style.opacity = '1';
+                card.querySelector('.card-content').style.padding = '1.5rem';
+            }
+            
+            function collapseCard() {
+                card.style.height = '80px';
+                card.querySelector('.card-content').style.opacity = '0';
+                card.querySelector('.card-content').style.padding = '0 1.5rem';
+            }
+            
+            card.addEventListener('mouseenter', expandCard);
+            card.addEventListener('mouseleave', collapseCard);
+            card.addEventListener('focus', expandCard);
+            card.addEventListener('blur', collapseCard);
+        }
+    });
+
+    window.addEventListener('resize', function() {
+        document.querySelectorAll('.download-card').forEach(card => {
+            if (window.innerWidth <= 768) {
+                card.style.height = 'auto';
+                card.querySelector('.card-content').style.opacity = '1';
+                card.querySelector('.card-content').style.padding = '0 1.5rem';
             } else {
-                collapseCard();
+                card.style.height = '80px';
+                card.querySelector('.card-content').style.opacity = '0';
+                card.querySelector('.card-content').style.padding = '0 1.5rem';
             }
         });
     });
